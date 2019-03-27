@@ -1,4 +1,6 @@
-// functions
+// -----------------------------------------------------
+// Functions
+// -----------------------------------------------------
 // retrun type
 function returnMyName(): string {
   return 'Myname'
@@ -11,12 +13,15 @@ function withOuthReturn(): void {
 function multiply(a: number, b: number): number {
   return a * b
 }
-
+// -----------------------------------------------------
 // Functions as a type
 // the arrow function as a type defines witch types of functions are allowed to be set to the variable
+// -----------------------------------------------------
 let myMultiply: (val1: number, val2: number) => number = multiply
 
-// objects
+// -----------------------------------------------------
+// Objects
+// -----------------------------------------------------
 // Validates that the object has the correctly properties and values
 let userData: { name: string, age: number } = {
   name: 'Cruz',
@@ -34,9 +39,12 @@ let complex: { data: number[], output: (all: boolean) => number[] } = {
   }
 }
 
-// Type alias, to basicaly define a type and refer to it after
+// -----------------------------------------------------
+// Type Alias:
+// To basicaly define a type and refer to it after
 // This sintaxis is valid to difine a type, because the type declaration
 // otherwise the type must be defined by columns 
+// -----------------------------------------------------
 type Complex = { data: number[], output: (all: boolean) => number[] }
 // Now we can declare a type Complex
 let complex2: Complex = {
@@ -44,25 +52,32 @@ let complex2: Complex = {
   output: function () { return this.data }
 }
 
+// -----------------------------------------------------
 // Unions 
+// -----------------------------------------------------
 // When type can be more than one type but type any is not a solution for the problem
 let realAge: (string | number) = 27
 realAge = '27'
 
-// check types
-
+// -----------------------------------------------------
+// Check Types
+// -----------------------------------------------------
 let finalValue = 'a string value'
 if (typeof finalValue === 'string') {
   // if the type is string
 }
 
-// never types 
+// -----------------------------------------------------
+// Never Types
+// ----------------------------------------------------- 
 // never != void, never is for never return anything ever, void can return void functions
 function neverReturns(): never {
   throw Error('An error')
 }
 
-// non-nullable and nullable types 
+// -----------------------------------------------------
+// Non-nullable and nullable types 
+// -----------------------------------------------------
 // nullables
 let canNotBeNull = 12
 // canNotBeNull = null /* Can't not seassing variable to null */

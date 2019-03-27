@@ -1,12 +1,15 @@
+// --------------------------------------------------
 // Implicit declaration
+// --------------------------------------------------
 // string
 let myName = 'Cruz'
 // number
 let myNumber = 25
 // boolean
 let isTrue = true
-
+// --------------------------------------------------
 // Explicit
+// --------------------------------------------------
 // string
 let myName2: string
 myName2 = 'hola'
@@ -17,7 +20,9 @@ myNumber2 = 25
 let isTrue2: boolean
 isTrue2 = false
 
+// ---------------------------------------------------
 // Arrays
+// ---------------------------------------------------
 // Implicit declaration, array of strings
 let fristArray = ['one', 'two']
 // error in reasignation
@@ -26,13 +31,18 @@ let fristArray = ['one', 'two']
 let secondArray: any[] = [0, 50]
 secondArray = ['hola', 'nuevo']
 
+// ---------------------------------------------------
 // Tuples, are Arrays, but with an especific format, for instance ['string', 252]
+// ---------------------------------------------------
 let thirdArray: [string, number] = ['Some String', 256252]
 // Compilation error
 // thirdArray = [1231,'Some String']
 thirdArray = ['Other String', 525]
 
-// enums, are sets of constants values use to retrict the type and values of a variable 
+// ---------------------------------------------------
+// Enums:
+// are sets of constants values use to retrict the type and values of a variable
+// ---------------------------------------------------
 enum Color {
   Blue, // 0
   Gray, // 1 is the next value following up the value of the item before 
@@ -42,7 +52,9 @@ enum Color {
 }
 let purple: Color = Color.Purple
 
+// ---------------------------------------------------
 // Any type
+// ---------------------------------------------------
 let carr: any = 'car'
 carr = 46
 carr = {}
