@@ -23,6 +23,11 @@ arrayNumber.push(1)
 // arrayNumber.push('sdasda') /* Type check error */
 
 // Using generic classes extending others types 
-class SomeGeneric <T extends number|string > {
-
+class SomeGeneric<T extends number | string> {
+  name: string
+  address: T /* Dynamic Type */
+  constructor(name: string, address: T) {
+    this.name = name,
+      this.address = address
+  }
 }
