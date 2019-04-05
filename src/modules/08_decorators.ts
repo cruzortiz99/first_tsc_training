@@ -16,7 +16,7 @@ class DecoPerson {
 
 // Factory
 function loggin(value: boolean) {
-  return value ? logged : null
+  return value ? logged : console.log
 }
 @loggin(true)
 class DecoCar {
