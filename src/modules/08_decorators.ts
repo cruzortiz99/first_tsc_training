@@ -53,3 +53,4 @@ const decorated = new MethodDecated()
 decorated.calcBuget = function () {
   console.log(10)
 }
+// Decorators are usefull some times but they ar evaluated in run time, so in compilation time, you will not have any warnning 
